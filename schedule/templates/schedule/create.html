@@ -1,0 +1,51 @@
+<div class="container">
+<a href="{% url 'home' %}">Home</a>
+
+    <h1>Add To Schedules:</h1>
+
+    {% if error %}
+        {{ error }}
+        <br>
+        <br>
+    {% endif %}
+
+
+    <form method="POST" action="" id="userform">
+    {% csrf_token %}
+
+    Title:
+    <br>
+    <input type="text" name="title"/>
+    <br>
+    Description:
+    <br>
+
+     <textarea rows="4" cols="50" name="description" form="userform"></textarea>
+
+    <br>
+    Date:
+    <br>
+    <input type="date" name="date"/>
+    <br>
+    Time:
+    <br>
+    <input type="time" name="time"/>
+    <br>
+    <br>
+    Location:
+    <br>
+    <input type="text" name="location"/>
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Create Schedule">
+    </form>
+    <br>
+
+</div>
+
+
+<!-- CSS LINK: -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+

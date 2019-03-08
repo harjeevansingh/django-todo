@@ -1,0 +1,46 @@
+
+<div class="container">
+<a href="{% url 'home' %}">Home</a>
+
+    <h1> Select the tasks to be deleted: </h1>
+
+    <br>
+    <br>
+
+    <!-- Displaying the previous schedules: -->
+
+
+<form action="{% url 'delete' %}" method="POST">
+    {% csrf_token %}
+    {%  for task in tasks.all %}
+        <input type="radio" id="task{{ forloop.counter }}" name="task" value="{{ task.id }}"/>
+        <label for="task{{ forloop.counter }}">
+        {{ task.title }} : {{ task.date }}
+        </label><br>
+
+    {% endfor %}
+
+    <input type="submit" value="Delete">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CSS LINK: -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+

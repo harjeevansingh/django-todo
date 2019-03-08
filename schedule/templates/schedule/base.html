@@ -1,0 +1,31 @@
+
+
+
+<div class="col-4 text-right" ><h1>Django Todo App</h1></div>
+
+
+<br> <br>
+{% block content %}
+
+{% endblock %}
+
+    <!-- The functions buttons -->
+<div class="container">
+    <div class="row">
+        <div class="col-4 text-right">
+            <a href="{% url 'create' %}"><button class="btn btn-primary btn-lg btn-block">Create New Schedule</button></a>
+        </div>
+
+        <div class="col-4 text-right">
+            <a href=""><button class="btn btn-primary btn-lg btn-block">Update Schedule</button></a>
+        </div>
+
+        <div class="col-4 text-right">
+            <a href="{% url 'delete' %}"><button class="btn btn-primary btn-lg btn-block">Delete Schedule</button></a>
+        </div>
+    </div>
+
+<!-- CSS LINK: -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+

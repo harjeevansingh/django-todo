@@ -1,0 +1,20 @@
+{% extends 'schedule/base.html' %}
+{% block content %}
+
+<div class="container">
+
+    <h1>{{ task.title }}</h1>
+    {{ task.time }}, {{ task.date }}
+    <br>
+    <br>
+
+    <p>{{ task.description }}</p>
+
+    Location : {{ task.location }}
+<br><br>
+
+
+
+</div>
+
+{% endblock %}
